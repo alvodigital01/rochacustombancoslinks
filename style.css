@@ -1,13 +1,13 @@
-:root {
+﻿:root {
   --black: #050505;
   --surface: #11110f;
   --surface-light: #181713;
-  --gold: #d4a72c;
-  --gold-light: #f2cd66;
+  --gold: #e53935;
+  --gold-light: #ff716b;
   --red: #b32025;
   --white: #f7f5ef;
   --muted: #f7f5ef;
-  --border: rgba(212, 167, 44, 0.42);
+  --border: rgba(229, 57, 53, 0.42);
 }
 
 * {
@@ -57,7 +57,7 @@ a {
   width: 1px;
   height: 72%;
   top: 12%;
-  background: linear-gradient(transparent, rgba(212, 167, 44, 0.15), transparent);
+  background: linear-gradient(transparent, rgba(229, 57, 53, 0.15), transparent);
   content: "";
 }
 
@@ -78,7 +78,7 @@ a {
 .ambient-glow--gold {
   top: -90px;
   left: calc(50% - 240px);
-  background: rgba(212, 167, 44, 0.11);
+  background: rgba(229, 57, 53, 0.11);
 }
 
 .ambient-glow--red {
@@ -250,7 +250,7 @@ h1 strong {
 .store-card:hover,
 .store-card:focus-visible {
   border-color: var(--gold-light);
-  box-shadow: 0 12px 34px rgba(212, 167, 44, 0.14), 0 0 14px rgba(212, 167, 44, 0.06);
+  box-shadow: 0 12px 34px rgba(229, 57, 53, 0.14), 0 0 14px rgba(229, 57, 53, 0.06);
   outline: none;
   transform: scale(1.02);
 }
@@ -298,7 +298,7 @@ h1 strong {
 .social-links a:focus-visible {
   border-color: var(--gold-light);
   color: var(--gold-light);
-  box-shadow: 0 0 14px rgba(212, 167, 44, 0.16);
+  box-shadow: 0 0 14px rgba(229, 57, 53, 0.16);
   outline: none;
   transform: translateY(-3px);
 }
@@ -344,8 +344,8 @@ h1 strong {
 }
 
 .reveal {
-  opacity: 0;
-  transform: translateY(16px);
+  opacity: 1;
+  transform: none;
 }
 
 .reveal.is-visible {
@@ -372,7 +372,7 @@ h1 strong {
   body { padding-block: 28px; }
   .profile {
     padding: 48px 28px 38px;
-    border: 1px solid rgba(212, 167, 44, 0.1);
+    border: 1px solid rgba(229, 57, 53, 0.1);
     border-radius: 42px;
     background: rgba(5, 5, 5, 0.76);
     box-shadow: 0 28px 90px rgba(0, 0, 0, 0.55);
@@ -386,4 +386,33 @@ h1 strong {
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
   }
+}
+
+
+/* Identidade e informações da GM Pneus. */
+.logo-wrap { width: 180px; height: 180px; border-radius: 24px; }
+.logo { padding: 0; background: #0b0b0b; }
+h1 { font-size: 36px; letter-spacing: 1px; }
+h1 strong { display: inline; font-size: 1em; letter-spacing: 1px; }
+.tagline, .intro { line-height: 1.6; }
+.store-card { border-radius: 20px; }
+.card-copy small { color: #ccc9c5; font-size: 11px; line-height: 1.65; }
+.card-arrow { font-size: 17px; }
+.phone-link { justify-self: center; color: #d9d5d2; font-size: 12px; padding: 8px; text-decoration: underline; text-underline-offset: 4px; }
+.phone-link:focus-visible { outline: 2px solid var(--gold-light); outline-offset: 4px; }
+.info-section { margin-top: 25px; padding: 24px 20px; background: #111; border: 1px solid #303030; border-radius: 20px; }
+.info-section h2 { margin: 0 0 18px; font-size: 17px; line-height: 1.4; }
+.eyebrow { color: var(--gold-light); font-size: 10px; text-transform: uppercase; letter-spacing: 1.3px; margin: 0 0 8px; }
+.services-list { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; padding: 0; margin: 0; list-style: none; }
+.services-list li { padding: 12px; border-left: 2px solid var(--gold); background: #1b1b1b; border-radius: 0 8px 8px 0; font-size: 12px; line-height: 1.5; }
+.section-note { margin: 18px 0 0; color: #ccc9c5; font-size: 12px; line-height: 1.7; }
+.hours-list { margin: 0; font-size: 12px; }
+.hours-list div { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px; padding: 12px 0; border-top: 1px solid #303030; }
+.hours-list dd { margin: 0; font-weight: 600; }
+.payment-copy { font-size: 13px; line-height: 1.7; margin: 0; }
+.reveal { opacity: 1; transform: none; }
+@media (max-width: 360px) {
+  .info-section { padding: 20px 15px; }
+  .services-list { gap: 8px; }
+  .services-list li { padding: 10px; font-size: 11px; }
 }
