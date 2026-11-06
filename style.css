@@ -614,3 +614,13 @@ body:has(.image-viewer[open]) { overflow: hidden; }
 @media (max-width: 300px) {
  .stores { grid-template-columns: 1fr; }
 }
+/* O atendimento sob medida completa a grade ao lado da Biz. */
+.custom-product-visual {
+ display: flex; flex-direction: column; align-items: center; justify-content: center;
+ gap: 14px; width: calc(100% + 20px); aspect-ratio: 1; margin: 0 -10px 14px;
+ padding: 14px; border-bottom: 3px solid #111; color: #202020; background: #f5f5f5;
+}
+.custom-product-visual > i { font-size: clamp(40px, 12vw, 68px); }
+.custom-product-visual > span { max-width: 150px; font-size: 13px; line-height: 1.5; }
+.product-button--custom { background: #168541; border-color: #168541; color: #fff; }
+.product-button--custom > i { font-size: 24px; }
