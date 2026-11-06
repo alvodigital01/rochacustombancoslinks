@@ -1,16 +1,16 @@
 // Edite os links de cada produto aqui. Links vazios ou provisórios ficam ocultos.
 const PRODUTOS = {
   slim: {
-    ml: "https://produto.mercadolivre.com.br/MLB-5230221201",
-    shopee: "COLAR_LINK_SHOPEE_SLIM"
+    ml: "https://www.mercadolivre.com.br/up/MLBU5194180060?matt_tool=38524122&pdp_filters=item_id:MLB5230221201&ua=tatR4xVW4woZlxvlt0NWTGdddYLiz0uG_HS2a7KNuuO3N5jU#origin=share&sid=share&wid=MLB5230221201&action=copy",
+    shopee: "https://br.shp.ee/pBvyWdE1"
   },
   plus: {
-    ml: "https://produto.mercadolivre.com.br/MLB-5238559647",
-    shopee: "COLAR_LINK_SHOPEE_PLUS"
+    ml: "https://www.mercadolivre.com.br/up/MLBU5209684614?matt_tool=38524122&pdp_filters=item_id:MLB5238559647&ua=jHmz4OG-5fGp6EANBYPUBuG4NWF6dYKynIR4n6Noc2LDVh2H#origin=share&sid=share&wid=MLB5238559647&action=copy",
+    shopee: "https://br.shp.ee/PdtN3GcK"
   },
   biz: {
-    ml: "https://produto.mercadolivre.com.br/MLB-7868832824",
-    shopee: "COLAR_LINK_SHOPEE_BIZ"
+    ml: "https://www.mercadolivre.com.br/up/MLBU5614777839?matt_tool=38524122&pdp_filters=item_id:MLB7868832824&ua=-0q9LE-j9ZmULkj-8dzNA52PdJkb5rYAvje7NySWbTtB8698#origin=share&sid=share&wid=MLB7868832824&action=copy",
+    shopee: "https://br.shp.ee/EV8p7Dsy"
   }
 };
 
@@ -66,3 +66,23 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 });
+
+const imageViewer = document.querySelector(".image-viewer");
+const viewerPhoto = imageViewer.querySelector(".image-viewer-photo");
+document.querySelectorAll(".product-preview").forEach((button) => {
+  button.addEventListener("click", () => {
+    const photo = button.querySelector("img");
+    viewerPhoto.src = photo.src;
+    viewerPhoto.alt = photo.alt;
+    imageViewer.showModal();
+  });
+});
+imageViewer.querySelector(".image-viewer-close").addEventListener("click", () => imageViewer.close());
+imageViewer.addEventListener("click", (event) => {
+  if (event.target === imageViewer) {
+    const bounds = imageViewer.getBoundingClientRect();
+    if (event.clientX < bounds.left || event.clientX > bounds.right ||
+        event.clientY < bounds.top || event.clientY > bounds.bottom) imageViewer.close();
+  }
+});
+imageViewer.addEventListener("close", () => viewerPhoto.removeAttribute("src"));
