@@ -16,6 +16,7 @@ const PRODUTOS = {
 
 const WHATSAPP = "https://wa.me/5543984168902?text=";
 const MENSAGENS = {
+  help: "Oi! Preciso de ajuda para escolher a capa para minha moto.",
   slim: "Oi! Vim pelo link e quero a Capa Comfort Slim pra CG 160. Qual o valor no Pix?",
   plus: "Oi! Vim pelo link e quero a Capa Comfort Plus pra CG 160. Qual o valor no Pix?",
   biz: "Oi! Vim pelo link e quero a Capa Comfort pra Biz 125. Qual o valor no Pix?",

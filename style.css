@@ -569,3 +569,48 @@ h1 strong { color: var(--gold-light); }
  font-size: 28px; cursor: pointer;
 }
 body:has(.image-viewer[open]) { overflow: hidden; }
+/* Leitura e orientação para quem está escolhendo a primeira capa. */
+.profile { width: min(100%, 560px); padding-inline: 16px; }
+.tagline, .intro { font-size: 14px; line-height: 1.6; }
+.choice-help {
+ display: flex; align-items: center; gap: 12px; margin-top: 24px;
+ padding: 16px; border: 1px solid #31864c; border-radius: 16px;
+ color: #fff; background: #12351f;
+}
+.choice-help > .fa-whatsapp { font-size: 30px; }
+.choice-help > span { flex: 1; min-width: 0; }
+.choice-help strong, .choice-help span span { display: block; }
+.choice-help strong { font-size: 15px; line-height: 1.5; }
+.choice-help span span { font-size: 13px; line-height: 1.6; }
+.choice-help > .fa-chevron-right { font-size: 12px; }
+.choice-help:focus-visible { outline: 3px solid #f2cd66; outline-offset: 4px; }
+.stores { gap: 12px; margin-top: 22px; }
+.product-card { padding-bottom: 14px; }
+.product-badge { font-size: 10px; padding: 6px; }
+.product-card h3 { font-size: 15px; line-height: 1.4; }
+.product-moto { font-size: 13px; line-height: 1.5; color: #444; }
+.product-detail { font-size: 13px; line-height: 1.55; color: #444; }
+.product-detail strong { display: block; margin-bottom: 6px; color: #202020; font-weight: 700; }
+.product-detail > span { display: block; }
+.product-preview { margin-bottom: 14px; font-family: inherit; }
+.preview-hint { display: block; padding: 8px 3px 0; color: #555; font-size: 11px; line-height: 1.5; }
+.product-button { min-height: 54px; gap: 5px; padding: 8px 4px; font-size: 12px; }
+.product-button span { display: block; }
+.product-button small {
+ display: block; margin-bottom: 2px; font-size: 11px;
+ font-weight: 600; text-transform: none;
+}
+.product-button img { width: 22px; height: 22px; }
+.card-copy strong { font-size: 15px; line-height: 1.4; }
+.card-copy small { font-size: 13px; line-height: 1.5; }
+.social-section > p { font-size: 12px; line-height: 1.6; letter-spacing: .5px; }
+.footer p, .footer small { font-size: 11px; line-height: 1.6; }
+@media (max-width: 360px) {
+ .profile { padding-inline: 12px; }
+ .stores { gap: 10px; }
+ .product-button img { width: 18px; height: 18px; }
+ .product-button { font-size: 11px; }
+}
+@media (max-width: 300px) {
+ .stores { grid-template-columns: 1fr; }
+}
