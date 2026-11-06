@@ -202,6 +202,111 @@ h1 strong {
   overflow: hidden;
 }
 
+.product-card {
+  position: relative;
+  min-width: 0;
+  padding: 18px 15px;
+  border: 1px solid var(--gold);
+  border-radius: 28px;
+  background: linear-gradient(110deg, var(--surface-light), #0d0d0c);
+  box-shadow: 0 10px 26px rgba(0, 0, 0, 0.28), inset 0 1px rgba(255, 255, 255, 0.025);
+}
+
+.product-badge {
+  display: table;
+  margin: 0 0 12px auto;
+  color: var(--gold-light);
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+.product-heading {
+  display: grid;
+  grid-template-columns: 72px minmax(0, 1fr);
+  gap: 12px;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.product-image {
+  display: block;
+  width: 72px;
+  height: 72px;
+  border-radius: 12px;
+  object-fit: cover;
+  background: var(--surface);
+}
+
+.product-heading .product-moto { margin-bottom: 0; }
+
+.product-card h3 {
+  margin: 0 0 9px;
+  color: var(--gold-light);
+  font-size: 18px;
+  line-height: 1.25;
+}
+
+.product-moto {
+  margin: 0 0 8px;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1.5;
+}
+
+.product-detail {
+  margin: 0;
+  font-size: 11px;
+  line-height: 1.6;
+}
+
+.product-actions {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 8px;
+  margin-top: 17px;
+}
+
+.product-button {
+  display: flex;
+  min-height: 44px;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  padding: 10px 6px;
+  border: 1px solid var(--gold);
+  border-radius: 14px;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 1.4;
+  text-align: center;
+  transition: filter 200ms ease;
+}
+
+.product-button--ml {
+  grid-column: 1 / -1;
+  min-height: 48px;
+  border-color: #ffe600;
+  color: #171700;
+  background: #ffe600;
+}
+
+.product-button--whatsapp {
+  border-color: #25d366;
+  color: #061b0d;
+  background: #25d366;
+}
+
+.product-button--whatsapp i { font-size: 18px; }
+
+.product-button:hover { filter: brightness(1.12); }
+.product-button:focus-visible {
+  outline: 2px solid var(--gold-light);
+  outline-offset: 3px;
+}
+
+[hidden] { display: none !important; }
+
 .card-logo img {
   display: block;
   width: 100%;
